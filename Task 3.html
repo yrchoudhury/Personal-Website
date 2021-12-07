@@ -10,7 +10,7 @@ div {text-align: center;}
 <title>Page Title</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="style2.css">
+<link rel="stylesheet" href="style3.css">
 
 <style>
 
@@ -48,48 +48,49 @@ body {
   </div>
   <div class="main">
     <h2>Task 3  / Typography Posters</h2>
+    <p>Here is Task 3's Typography Poster we have made which reflect on the 8 different types of Typography.</p>
  <!-- Container for the image gallery -->
  <div class="container">
 
   <!-- Full-width images with number text -->
   <div class="mySlides">
     <div class="numbertext">1 / 8</div>
-      <img src="Axial Poster.jpg" style="width:100%">
+      <img src="Axial Poster.jpg" style="width:50%">
   </div>
 
   <div class="mySlides">
     <div class="numbertext">2 / 8</div>
-      <img src="Bilateral Poster.jpg" style="width:100%">
+      <img src="Bilateral Poster.jpg" style="width:50%">
   </div>
 
   <div class="mySlides">
     <div class="numbertext">3 / 8</div>
-      <img src="D Poster.jpg" style="width:100%">
+      <img src="D Poster.jpg" style="width:50%">
   </div>
 
   <div class="mySlides">
     <div class="numbertext">4 / 8</div>
-      <img src="Grid Poster.jpg" style="width:100%">
+      <img src="Grid Poster.jpg" style="width:50%">
   </div>
 
   <div class="mySlides">
     <div class="numbertext">5 / 8</div>
-      <img src="Modular Poster.jpg" style="width:100%">
+      <img src="Modular Poster.jpg" style="width:50%">
   </div>
 
   <div class="mySlides">
     <div class="numbertext">6 / 8</div>
-      <img src="Radial Poster.jpg" style="width:100%">
+      <img src="Radial Poster.jpg" style="width:50%">
   </div>
 
   <div class="mySlides">
     <div class="numbertext">7 / 8</div>
-      <img src="Random Poster.jpg" style="width:100%">
+      <img src="Random Poster.jpg" style="width:50%">
   </div>
 
   <div class="mySlides">
     <div class="numbertext">8 / 8</div>
-      <img src="Transitional Poster.jpg" style="width:100%">
+      <img src="Transitional Poster.jpg" style="width:50%">
   </div>
 
   <!-- Next and previous buttons -->
@@ -104,29 +105,60 @@ body {
   <!-- Thumbnail images -->
   <div class="row">
     <div class="column">
-      <img class="demo cursor" src="img_woods.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+      <img class="demo cursor" src="Axial Poster.jpg" style="width:50%" onclick="currentSlide(1)" alt="Axial Poster">
     </div>
     <div class="column">
-      <img class="demo cursor" src="img_5terre.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+      <img class="demo cursor" src="Bilateral Poster.jpg" style="width:50%" onclick="currentSlide(2)" alt="Bilateral Poster">
     </div>
     <div class="column">
-      <img class="demo cursor" src="img_mountains.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+      <img class="demo cursor" src="D Poster.jpg" style="width:50%" onclick="currentSlide(3)" alt="Dilatational Poster">
     </div>
     <div class="column">
-      <img class="demo cursor" src="img_lights.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+      <img class="demo cursor" src="Grid Poster.jpg" style="width:50%" onclick="currentSlide(4)" alt="Grid Poster">
     </div>
     <div class="column">
-      <img class="demo cursor" src="img_nature.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
+      <img class="demo cursor" src="Modular Poster.jpg" style="width:50%" onclick="currentSlide(5)" alt="Modular Poster">
     </div>
     <div class="column">
-      <img class="demo cursor" src="img_snow.jpg" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
+      <img class="demo cursor" src="Radial Poster.jpg" style="width:50%" onclick="currentSlide(6)" alt="Radial Poster">
     <div class="column">
-        <img class="demo cursor" src="img_nature.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
+        <img class="demo cursor" src="Random Poster.jpg" style="width:50%" onclick="currentSlide(7)" alt="Random Poster">
     </div>
     <div class="column">
-        <img class="demo cursor" src="img_snow.jpg" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
+        <img class="demo cursor" src="Transitional Poster.jpg" style="width:50%" onclick="currentSlide(8)" alt="Transitional Poster">
     </div>
   </div>
+
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+    </script>
 
 <div class="footer">
   <h2>Yasin.</h2>
@@ -134,10 +166,6 @@ body {
 
 </body>
 </html>
-
-<div class="footer">
-  <h2>Yasin.</h2>
-</div>
 
 </body>
 </html>
