@@ -153,54 +153,60 @@
           <img class="demo cursor" src="Modular Poster.jpg" style="width:50%" onclick="currentSlide(5)"
             alt="Modular Poster">
         </div>
+
         <div class="column">
           <img class="demo cursor" src="Radial Poster.jpg" style="width:50%" onclick="currentSlide(6)"
             alt="Radial Poster">
-          <div class="column">
-            <img class="demo cursor" src="Random Poster.jpg" style="width:50%" onclick="currentSlide(7)"
-              alt="Random Poster">
-          </div>
-          <div class="column">
-            <img class="demo cursor" src="Transitional Poster.jpg" style="width:50%" onclick="currentSlide(8)"
-              alt="Transitional Poster">
-          </div>
-        </div>
-
-        <script>
-          var slideIndex = 1;
-          showSlides(slideIndex);
-
-          function plusSlides(n) {
-            showSlides(slideIndex += n);
-          }
-
-          function currentSlide(n) {
-            showSlides(slideIndex = n);
-          }
-
-          function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            var dots = document.getElementsByClassName("demo");
-            var captionText = document.getElementById("caption");
-            if (n > slides.length) { slideIndex = 1 }
-            if (n < 1) { slideIndex = slides.length }
-            for (i = 0; i < slides.length; i++) {
-              slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-              dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
-            captionText.innerHTML = dots[slideIndex - 1].alt;
-          }
-        </script>
-
-        <div class="footer">
-          <h2>Yasin.</h2>
 
         </div>
+
+
+        <div class="column">
+          <img class="demo cursor" src="Random Poster.jpg" style="width:50%" onclick="currentSlide(7)"
+            alt="Random Poster">
+        </div>
+
+        <div class="column">
+          <img class="demo cursor" src="Transitional Poster.jpg" style="width:50%" onclick="currentSlide(8)"
+            alt="Transitional Poster">
+        </div>
+      </div>
+
+      <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("demo");
+          var captionText = document.getElementById("caption");
+          if (n > slides.length) { slideIndex = 1 }
+          if (n < 1) { slideIndex = slides.length }
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex - 1].style.display = "block";
+          dots[slideIndex - 1].className += " active";
+          captionText.innerHTML = dots[slideIndex - 1].alt;
+        }
+      </script>
+
+      <div class="footer">
+        <h2>Yasin.</h2>
+
+      </div>
 
 </body>
 
