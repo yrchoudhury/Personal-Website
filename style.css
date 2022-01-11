@@ -1,42 +1,39 @@
 .header {
-    padding: 80px; /* some padding */
-    text-align: center; /* center the text */
-    background: #1d1abc; /* blue background */
-    color: white; /* white text color */
+    padding: 80px; 
+    text-align: center; 
+    background: #1d1abc; 
+    color: white; 
   }
   
-  /* Increase the font size of the <h1> element */
+
   .header h1 {
     font-size: 40px;
   }
 
-  /* Style the top navigation bar */
+ 
 .navbar {
-  overflow: hidden; /* Hide overflow */
-  background-color: #333; /* Dark background color */
+  overflow: hidden; 
+  background-color: #333; 
 }
 
-/* Style the navigation bar links */
+
 .navbar a {
-  float: left; /* Make sure that the links stay side-by-side */
-  display: block; /* Change the display to block, for responsive reasons (see below) */
-  color: white; /* White text color */
-  text-align: center; /* Center the text */
-  padding: 14px 20px; /* Add some padding */
-  text-decoration: none; /* Remove underline */
+  float: left; 
+  display: block; 
+  color: white; 
+  text-align: center; 
+  padding: 14px 20px; 
+  text-decoration: none; 
 }
 
-/* Right-aligned link */
 .navbar a.right {
-  float: right; /* Float a link to the right */
+  float: right; 
 }
 
-/* Change color on hover/mouse-over */
 .navbar a:hover {
-  background-color: #ddd; /* Grey background color */
-  color: black; /* Black text color */
+  background-color: #ddd; 
+  color: black; 
 }
-/* Style the header */
 .header {
   padding: 80px;
   text-align: center;
@@ -44,18 +41,15 @@
   color: white;
 }
 
-/* Increase the font size of the h1 element */
 .header h1 {
   font-size: 40px;
 }
 
-/* Style the top navigation bar */
 .navbar {
   overflow: hidden;
   background-color: #333;
 }
 
-/* Style the navigation bar links */
 .navbar a {
   float: left;
   display: block;
@@ -65,60 +59,50 @@
   text-decoration: none;
 }
 
-/* Right-aligned link */
 .navbar a.right {
   float: right;
 }
 
-/* Change color on hover */
 .navbar a:hover {
   background-color: rgb(255, 255, 255);
   color: black;
 }
 
-/* Column container */
 .row {  
   display: flex;
   flex-wrap: wrap;
 }
 
-/* Create two unequal columns that sits next to each other */
-/* Sidebar/left column */
 .side {
   flex: 30%;
   background-color: #f1f1f1;
   padding: 20px;
 }
 
-/* Main column */
 .main {   
   flex: 70%;
   background-color: white;
   padding: 20px;
 }
 
-/* me image, just for this example */
 .fakeimg {
   background-color: #aaa;
   width: 100%;
   padding: 20px;
 }
 
-/* Footer */
 .footer {
   padding: 20px;
   text-align: center;
   background: #ddd;
 }
 
-/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 700px) {
   .row {   
     flex-direction: column;
   }
 }
 
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
 @media screen and (max-width: 400px) {
   .navbar a {
     float: none;
